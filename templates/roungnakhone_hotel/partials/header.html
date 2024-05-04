@@ -1,0 +1,158 @@
+{% load static %}
+{% load i18n %}
+
+<style>
+  .logo-container {
+    display: flex;
+    align-items: center; /* Vertically center items */
+  }
+
+  .lao-font ul li a {
+    /* font-family: 'NotoSansLao', sans-serif !important; */
+    font-size: 18px !important;
+  }
+</style>
+
+<header class="header_area">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <a class="navbar-brand logo_h" href="{% url 'home' %}">
+        <div class="logo-container">
+          <img class="mr-1" src="{% static 'roungnakhone_hotel/image/favicon.png' %}" alt="" />
+          <span class="font-weight-bold text-uppercase">Roungnakhone</span>
+        </div>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div
+        class="collapse navbar-collapse offset lao-font"
+        id="navbarSupportedContent"
+      >
+        <ul class="nav navbar-nav menu_nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'home' %}">{% trans "Home" %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">{% trans "About us" %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'accomodation' %}">{% trans "Accomodation" %}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'gallery' %}">{% trans "Gallery" %}</a>
+          </li>
+          <!-- <li class="nav-item submenu dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Blog</a
+            >
+            <ul class="dropdown-menu">
+              <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="blog-single.html">Blog Details</a>
+              </li>
+            </ul>
+          </li> -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="elements.html">Elemests</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contact' %}">{% trans "Contact" %}</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <!-- Flag image (initially English) -->
+              <!-- <img id="language-flag" src="{% static 'roungnakhone_hotel/image/flags/Flag_of_United_States-64x34.png' %}" alt="English" width="40"> -->
+              <!-- Flag image (initially set by JavaScript) -->
+              <img id="language-flag" src="" alt="" width="40">
+            </a>
+            <div class="text-center dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <!-- Language selection dropdown items with onclick event -->
+              <a class="dropdown-item text-left" href="#" onclick="changeLanguage('en')">
+                <!-- English flag image -->
+                <img src="{% static 'roungnakhone_hotel/image/flags/Flag_of_United_States-64x34.png' %}" alt="English" width="40" height="24">
+                {% trans "English" %}
+              </a>
+              <a class="dropdown-item text-left" href="#" onclick="changeLanguage('lo')">
+                <!-- Lao flag image -->
+                <img src="{% static 'roungnakhone_hotel/image/flags/Flag_of_Laos-64x43.png' %}" alt="Lao" width="40" height="24">
+                {% trans "Lao" %}
+              </a>
+            </div>
+          </li>
+
+          {% if request.user.is_authenticated %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img
+              src="{% if guest.profile_image %} {{ guest.profile_image.url }} {% else %} {% static 'account/images/default.jpg' %} {% endif %}"
+              alt="profile image"
+              class="profile-pic me-2 rounded-circle"
+              style="width: 40px; height: 40px;"
+              />
+              <span class="mr-2">{{ request.user.username }}</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'user-profile' %}">{% trans "Profile" %}</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="{% url 'logout' %}">{% trans "Logout" %}</a>
+            </div>
+          </li>
+          {% else %}
+          <li class="mt-3">
+            <a class="nav-link btn btn-info" href="{% url 'login' %}">{% trans "Login" %}</a>
+          </li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<script>
+  function changeLanguage(language) {
+    // Redirect to the corresponding language page
+    window.location.href = "/" + language + "/";
+  }
+
+  function updateFlag() {
+    var flagImage = document.getElementById('language-flag');
+    var currentUrl = window.location.pathname;
+    
+    // Check if the current URL indicates Lao
+    if (currentUrl.includes('/lo/')) {
+      flagImage.src = "{% static 'roungnakhone_hotel/image/flags/Flag_of_Laos-64x43.png' %}";
+      flagImage.alt = "Lao";
+    } else {
+      // Default to English if the URL doesn't specify Lao
+      flagImage.src = "{% static 'roungnakhone_hotel/image/flags/Flag_of_United_States-64x34.png' %}";
+      flagImage.alt = "English";
+    }
+  }
+
+  // Call the function to update the flag when the page loads
+  updateFlag();
+
+</script>

@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-30 18:17+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\dj_roungnakhone_hotel\settings\common.py:112
+#: .\templates\roungnakhone_hotel\partials\header.html:94
+msgid "English"
+msgstr "ພາສາອັງກີດ"
+
+#: .\dj_roungnakhone_hotel\settings\common.py:113
+#: .\templates\roungnakhone_hotel\partials\header.html:99
+msgid "Lao"
+msgstr "ພາສາລາວ"
+
+#: .\dj_roungnakhone_hotel\settings\common.py:114
+msgid "Thai"
+msgstr "ພາສາໄທ"
+
+#: .\templates\roungnakhone_hotel\partials\header.html:45
+msgid "Home"
+msgstr "ໜ້າຫຼັກ"
+
+#: .\templates\roungnakhone_hotel\partials\header.html:48
+msgid "About us"
+msgstr "ກ່ຽວກັບພວກເຮົາ"
+
+#: .\templates\roungnakhone_hotel\partials\header.html:51
+msgid "Accomodation"
+msgstr "ຫ້ອງພັກ"
+
+#: .\templates\roungnakhone_hotel\partials\header.html:54
+msgid "Gallery"
+msgstr "ຄັງຮູບ"
+
+#: .\templates\roungnakhone_hotel\partials\header.html:79
+msgid "Contact"
+msgstr "ຕິດຕໍ່"
+
+#: .\templates\roungnakhone_hotel\partials\header.html:116
+msgid "Profile"
+msgstr "ໂປຣໄຟລ໌"
+
+#: .\templates\roungnakhone_hotel\partials\header.html:118
+msgid "Logout"
+msgstr "ອອກຈາກລະບົບ"
+
+#: .\templates\roungnakhone_hotel\partials\header.html:123
+msgid "Login"
+msgstr "ເຂົ້າສູ່ລະບົບ"

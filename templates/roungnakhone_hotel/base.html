@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <!-- Required meta tags -->
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" href="{% static 'roungnakhone_hotel/image/favicon.png' %}" type="image/png" />
+    <title>Roungnakhone Hotel</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'roungnakhone_hotel/css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'roungnakhone_hotel/vendors/linericon/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'roungnakhone_hotel/css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'roungnakhone_hotel/vendors/owl-carousel/owl.carousel.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'roungnakhone_hotel/vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'roungnakhone_hotel/vendors/nice-select/css/nice-select.css' %}" />
+    <link rel="stylesheet" href="{% static 'roungnakhone_hotel/vendors/owl-carousel/owl.carousel.min.css' %}" />
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'roungnakhone_hotel/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'roungnakhone_hotel/css/responsive.css' %}" />
+  </head>
+  <body>
+    <!--================Header Area =================-->
+    {% include 'roungnakhone_hotel/partials/header.html' %}
+    <!--================Header Area =================-->
+
+    {% block content %}
+    <!--================Banner Area =================-->
+    <!--================ Accomodation Area  =================-->
+    <!--================ Facilities Area  =================-->
+    <!--================ About History Area  =================-->
+    <!--================ Testimonial Area  =================-->
+    <!--================ Latest Blog Area  =================-->
+    {% endblock content %}
+
+    <!--================ start footer Area  =================-->
+    {% include 'roungnakhone_hotel/partials/footer.html' %}
+    <!--================ End footer Area  =================-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {% block script %} {% endblock script %}
+  </body>
+</html>
