@@ -1,5 +1,6 @@
 {% extends 'roungnakhone_hotel/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
     <!--================Breadcrumb Area =================-->
     <section class="breadcrumb_area">
@@ -11,7 +12,7 @@
       ></div>
       <div class="container">
         <div class="page-cover text-center">
-          <h2 class="page-cover-tittle">About Us</h2>
+          <h2 class="page-cover-tittle">{% trans "About us" %}</h2>
           <ol class="breadcrumb">
             <li><a href="{% url 'home' %}">Home</a></li>
             <li class="active">About</li>
@@ -28,18 +29,18 @@
           <div class="col-md-6 d_flex align-items-center">
             <div class="about_content">
               <h2 class="title title_color">
-                About Us <br />Our History<br />Mission & Vision
+                {% trans "About Us" %} <br />{% trans "Our History" %}<br />{% trans "Mission & Vision" %}
               </h2>
               <p>
-                inappropriate behavior is often laughed off as “boys will be
-                boys,” women face higher conduct standards especially in the
-                workplace. That’s why it’s crucial that, as women, our behavior
-                on the job is beyond reproach. inappropriate behavior is often
-                laughed.
+                {% trans "Vang Vieng District, Vientiane Province is a city and a province located in the central part of the Lao People's Democratic Republic. Vang Vieng District is a city full of beautiful nature, high mountains with rivers flowing from north to south, and important tourist attractions, the most outstanding of which are: Thum Cham Cave, Man Pha Cave, Thum Lom, Thum Pu Kham, Luang Luang." %}
+
+                {% trans "In addition to the main tourist attractions in Vang Vieng, there are many comfortable accommodation facilities to serve both domestic and foreign tourists who visit Vang Vieng, one of which is the Hung Nakhon Hotel. Another place is ready to serve tourists." %}
+                
+                {% trans "Rainbow City is a place to stay in the center of Vang Vieng which is popular for guests to stay close to interesting tourist attractions. Rainbow City is a 3 star hotel with a total of 160 rooms. The rooms are well decorated. In addition, the hotel also has breakfast service and the place near the hotel also has shopping malls, restaurants, convenience stores that can facilitate tourists well." %}
               </p>
-              <a href="#" class="button_hover theme_btn_two"
+              <!-- <a href="#" class="button_hover theme_btn_two"
                 >Request Custom Price</a
-              >
+              > -->
             </div>
           </div>
           <div class="col-md-6">

@@ -1,5 +1,6 @@
 {% extends 'roungnakhone_hotel/base.html' %}
 {% load static %}
+{% load i18n %}
 {% load custom_humanize %}
 {% block content %}
 <style>
@@ -18,7 +19,7 @@
       ></div>
       <div class="container">
         <div class="page-cover text-center">
-          <h2 class="page-cover-tittle">Accomodation</h2>
+          <h2 class="page-cover-tittle">{% trans "Accomodation" %}</h2>
           <ol class="breadcrumb">
             <li><a href="{% url 'home' %}">Home</a></li>
             <li class="active">Accomodation</li>
@@ -32,11 +33,11 @@
     <section class="accomodation_area section_gap">
       <div class="container">
         <div class="section_title text-center">
-          <h2 class="title_color">Top Accomodation</h2>
-          <p>
+          <h2 class="title_color">{% trans "Top Accomodation" %}</h2>
+          <!-- <p>
             We all live in an age that belongs to the young at heart. Life that
             is becoming extremely fast,
-          </p>
+          </p> -->
         </div>
         <div class="row mb_30">
           {% for room in top_reserved_rooms %}
@@ -45,10 +46,10 @@
               <div class="hotel_img">
                 <!-- <img src="{% static 'roungnakhone_hotel/image/room1.jpg' %}" alt="" /> -->
                 <img src="{{ room.room_image.url }}" alt="" class="hotel-accomodation" />
-                <a href="{% url 'reservation' room.id %}" class="btn theme_btn button_hover">Book Now</a>
+                <a href="{% url 'reservation' room.id %}" class="btn theme_btn button_hover">{% trans "Book Now" %}</a>
               </div>
               <a href="#"><h4 class="sec_h4">{{ room.category }}</h4></a>
-              <h5>LAK{{ room.price|intcomma }}<small>/night</small></h5>
+              <h5>LAK{{ room.price|intcomma }}<small>/{% trans "night" %}</small></h5>
             </div>
           </div>
           {% endfor %}
@@ -141,11 +142,11 @@
     <section class="accomodation_area section_gap">
       <div class="container">
         <div class="section_title text-center">
-          <h2 class="title_color">Normal Accomodation</h2>
-          <p>
+          <h2 class="title_color">{% trans "Normal Accomodation" %}</h2>
+          <!-- <p>
             We all live in an age that belongs to the young at heart. Life that
             is becoming extremely fast,
-          </p>
+          </p> -->
         </div>
         <div class="row accomodation_two">
           {% for room in rooms %}
@@ -153,10 +154,10 @@
             <div class="accomodation_item text-center">
               <div class="hotel_img">
                 <img src="{{ room.room_image.url }}" alt="" class="hotel-accomodation" />
-                <a href="#" class="btn theme_btn button_hover">Book Now</a>
+                <a href="#" class="btn theme_btn button_hover">{% trans "Book Now" %}</a>
               </div>
               <a href="#"><h4 class="sec_h4">{{ room.category }}</h4></a>
-              <h5>LAK{{ room.price|intcomma }}<small>/night</small></h5>
+              <h5>LAK{{ room.price|intcomma }}<small>/{% trans "night" %}</small></h5>
             </div>
           </div>
           {% endfor %}

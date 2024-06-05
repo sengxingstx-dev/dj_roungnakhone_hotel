@@ -4,6 +4,12 @@
 <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" /> -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+<style>
+  * {
+    font-family: "NotoSansLao";
+  }
+</style>
+
 <!-- For bootstrap modal form -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
@@ -59,11 +65,11 @@
     <div class="col-sm-12">
       <div class="card">
         <div class="card-body">
-          <h4 class="card-title">Manage Categories</h4>
+          <h4 class="card-title">ຈັດການປະເພດຫ້ອງ</h4>
           <!-- <h6 class="card-subtitle">Add class <code>.table</code></h6> -->
           <hr>
           <div class="d-flex justify-content-between align-items-center mb-3">
-            <a class="btn btn-outline-info align-items-center" href="#" data-toggle="modal" data-target="#form">Add Category</a>
+            <a class="btn btn-outline-info align-items-center" href="#" data-toggle="modal" data-target="#form">ເພີ່ມປະເພດຫ້ອງ</a>
           </div>
 
             <!-- Modal form  -->
@@ -71,7 +77,7 @@
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header border-bottom-0">
-                    <h5 class="modal-title" id="exampleModalLabel">Create Category</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">ເພີ່ມປະເພດຫ້ອງ</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -80,12 +86,12 @@
                     {% csrf_token %}
                     <div class="modal-body">
                       <div class="form-group">
-                        <label for="category">Category Name</label>
-                        <input type="text" class="form-control" id="category" name="category_name" placeholder="Enter category">
+                        <label for="category">ຊື່ປະເພດຫ້ອງ</label>
+                        <input type="text" class="form-control" id="category" name="category_name" placeholder="ປ້ອນຊື່ປະເພດຫ້ອງ">
                       </div>
                     </div>
                     <div class="modal-footer border-top-0 d-flex justify-content-center">
-                      <button type="submit" class="btn btn-success">Submit</button>
+                      <button type="submit" class="btn btn-success">ບັນທືກ</button>
                     </div>
                   </form>
                 </div>
@@ -116,8 +122,8 @@
               <thead>
                 <tr>
                   <th class="border-top-0">#</th>
-                  <th class="border-top-0">Category Name</th>
-                  <th class="border-top-0">Actions</th>
+                  <th class="border-top-0">ຊື່ປະເພດຫ້ອງ</th>
+                  <th class="border-top-0">ຈັດການ</th>
                 </tr>
               </thead>
               <tbody>
@@ -126,15 +132,15 @@
                   <td>{{ category.id }}</td>
                   <td>{{ category.category_name }}</td>
                   <td>
-                    <a class="btn btn-warning" href="#" data-toggle="modal" data-target="#form-{{ category.id }}">Edit</a>
-                    <a class="btn btn-danger" href="#" data-toggle="modal" data-target="#confirmDeleteModal-{{ category.id }}">Delete</a>
+                    <a class="btn btn-warning" href="#" data-toggle="modal" data-target="#form-{{ category.id }}">ແກ້ໄຂ</a>
+                    <a class="btn btn-danger" href="#" data-toggle="modal" data-target="#confirmDeleteModal-{{ category.id }}">ລືບ</a>
 
                     <!-- Delete Confirmation Modal -->
                     <div class="modal fade my-modal" id="confirmDeleteModal-{{ category.id }}" tabindex="-1" role="dialog" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
                       <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title" id="confirmDeleteModalLabel">Confirm Delete</h5>
+                            <h5 class="modal-title" id="confirmDeleteModalLabel">ຢືນຢັນການລືບ</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
@@ -143,11 +149,11 @@
                           <form action="{% url 'delete-category' category.id %}" method="POST">
                             {% csrf_token %}
                             <div class="modal-body">
-                              Are you sure you want to delete this category?
+                              ທ່ານຕ້ອງການລືບປະເພດຫ້ອງນີ້ແທ້ບໍ?
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                              <button type="submit" class="btn btn-danger">Delete</button>
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">ຍົກເລີກ</button>
+                              <button type="submit" class="btn btn-danger">ລືບ</button>
                             </div>
                           </form>
                           
@@ -162,7 +168,7 @@
                       <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                           <div class="modal-header border-bottom-0">
-                            <h5 class="modal-title" id="exampleModalLabel">Edit Category</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">ແກ້ໄຂປະເພດຫ້ອງ</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                               <span aria-hidden="true">&times;</span>
                             </button>
@@ -171,12 +177,12 @@
                             {% csrf_token %}
                             <div class="modal-body">
                               <div class="form-group">
-                                <label for="category-name">Category Name</label>
-                                <input type="text" class="form-control" id="category-name" name="category_name" value="{{ category.category_name }}" placeholder="Enter category">
+                                <label for="category-name">ຊື່ປະເພດຫ້ອງ</label>
+                                <input type="text" class="form-control" id="category-name" name="category_name" value="{{ category.category_name }}" placeholder="ປ້ອນຊື່ປະເພດຫ້ອງ">
                               </div>
                             </div>
                             <div class="modal-footer border-top-0 d-flex justify-content-center">
-                              <button type="submit" class="btn btn-success" name="category_form_submit_edit">Update</button>
+                              <button type="submit" class="btn btn-success" name="category_form_submit_edit">ບັນທືກ</button>
                             </div>
                           </form>
                         </div>

@@ -1,5 +1,6 @@
 {% extends 'roungnakhone_hotel/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
     <!--================Breadcrumb Area =================-->
     <section class="breadcrumb_area">
@@ -11,7 +12,7 @@
       ></div>
       <div class="container">
         <div class="page-cover text-center">
-          <h2 class="page-cover-tittle">Gallery</h2>
+          <h2 class="page-cover-tittle">{% trans "Gallery" %}</h2>
           <ol class="breadcrumb">
             <li><a href="{% url 'home' %}">Home</a></li>
             <li class="active">Gallery</li>
@@ -25,7 +26,7 @@
     <section class="gallery_area section_gap">
       <div class="container">
         <div class="section_title text-center">
-          <h2 class="title_color">Hotel Gallery</h2>
+          <h2 class="title_color">{% trans "Hotel Gallery" %}</h2>
           <p>Who are in extremely love with eco friendly system.</p>
         </div>
         <div class="row imageGallery1" id="gallery">

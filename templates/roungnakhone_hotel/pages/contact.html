@@ -1,5 +1,6 @@
 {% extends 'roungnakhone_hotel/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
     <!--================Breadcrumb Area =================-->
     <section class="breadcrumb_area">
@@ -11,7 +12,7 @@
       ></div>
       <div class="container">
         <div class="page-cover text-center">
-          <h2 class="page-cover-tittle">Contact Us</h2>
+          <h2 class="page-cover-tittle">{% trans "Contact" %}</h2>
           <ol class="breadcrumb">
             <li><a href="index.html">Home</a></li>
             <li class="active">Contact Us</li>

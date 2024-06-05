@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-30 18:17+0700\n"
+"POT-Creation-Date: 2024-05-20 21:25+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,48 +17,232 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .\dj_roungnakhone_hotel\settings\common.py:112
-#: .\templates\roungnakhone_hotel\partials\header.html:94
+#: .\apps\account\templates\account\login.html:57
+#: .\apps\account\templates\account\login.html:103
+#: .\apps\account\templates\account\register.html:176
+#: .\templates\roungnakhone_hotel\partials\header.html:124
+msgid "Login"
+msgstr "ເຂົ້າສູ່ລະບົບ"
+
+#: .\apps\account\templates\account\login.html:79
+#: .\apps\account\templates\account\register.html:79
+msgid "Username"
+msgstr "ຊື່ຜູ້ໃຊ້"
+
+#: .\apps\account\templates\account\login.html:91
+#: .\apps\account\templates\account\register.html:115
+msgid "Password"
+msgstr "ລະຫັດຜ່ານ"
+
+#: .\apps\account\templates\account\login.html:126
+#: .\apps\account\templates\account\register.html:165
+msgid "Remember Me"
+msgstr "ຈື່ຂ້ອຍ"
+
+#: .\apps\account\templates\account\login.html:132
+#: .\apps\account\templates\account\register.html:171
+msgid "Forgot Password"
+msgstr "ລືມລະຫັດຜ່ານ"
+
+#: .\apps\account\templates\account\login.html:138
+#: .\apps\account\templates\account\register.html:176
+msgid "Not a member?"
+msgstr "ຍັງບໍ່ແມ່ນສະມາຊິກ?"
+
+#: .\apps\account\templates\account\login.html:138
+#: .\apps\account\templates\account\register.html:57
+#: .\apps\account\templates\account\register.html:143
+msgid "Register"
+msgstr "ລົງທະບຽນ"
+
+#: .\apps\account\templates\account\profile.html:132
+#, fuzzy
+#| msgid "First Name"
+msgid "Full Name"
+msgstr "ຊືີ່"
+
+#: .\apps\account\templates\account\profile.html:141
+#: .\apps\account\templates\account\register.html:103
+msgid "Email"
+msgstr "ອີເມວ"
+
+#: .\apps\account\templates\account\profile.html:148
+#: .\apps\account\templates\account\register.html:97
+msgid "Phone"
+msgstr "ເບີເທີ"
+
+#: .\apps\account\templates\account\profile.html:155
+msgid "Address"
+msgstr "ທີ່ຢູ່"
+
+#: .\apps\account\templates\account\profile.html:165
+msgid "Edit"
+msgstr "ແກ້ໄຂ"
+
+#: .\apps\account\templates\account\profile.html:436
+msgid "Booking History"
+msgstr "ປະຫວັດການຈອງ"
+
+#: .\apps\account\templates\account\profile.html:441
+msgid "ID"
+msgstr "ໄອດີ"
+
+#: .\apps\account\templates\account\profile.html:442
+#: .\templates\roungnakhone_hotel\pages\reservation-form.html:224
+msgid "Check-in Date"
+msgstr "ວັນທີ່ເຊັກອິນ"
+
+#: .\apps\account\templates\account\profile.html:443
+#: .\templates\roungnakhone_hotel\pages\reservation-form.html:228
+msgid "Check-out Date"
+msgstr "ວັນທີ່ເຊັກເອົ້າ"
+
+#: .\apps\account\templates\account\profile.html:444
+msgid "Room"
+msgstr "ຫ້ອງ"
+
+#: .\apps\account\templates\account\profile.html:445
+msgid "Total Price"
+msgstr "ຈຳນວນເງິນ"
+
+#: .\apps\account\templates\account\profile.html:446
+#, fuzzy
+#| msgid "Accomodation"
+msgid "Actions"
+msgstr "ຫ້ອງພັກ"
+
+#: .\apps\account\templates\account\profile.html:459
+msgid "View Details"
+msgstr "ເບິ່ງລາຍລະອຽດ"
+
+#: .\apps\account\templates\account\profile.html:467
+msgid "No booking history found"
+msgstr "ບໍ່ມີປະຫວັດການຈອງ"
+
+#: .\apps\account\templates\account\register.html:85
+msgid "First Name"
+msgstr "ຊືີ່"
+
+#: .\apps\account\templates\account\register.html:91
+msgid "Last Name"
+msgstr "ນາມສະກຸນ"
+
+#: .\apps\account\templates\account\register.html:131
+msgid "Confirm Password"
+msgstr "ຢືນຢັນລະຫັດຜ່ານ"
+
+#: .\dj_roungnakhone_hotel\settings\common.py:113
+#: .\templates\roungnakhone_hotel\partials\header.html:95
 msgid "English"
 msgstr "ພາສາອັງກີດ"
 
-#: .\dj_roungnakhone_hotel\settings\common.py:113
-#: .\templates\roungnakhone_hotel\partials\header.html:99
+#: .\dj_roungnakhone_hotel\settings\common.py:114
+#: .\templates\roungnakhone_hotel\partials\header.html:100
 msgid "Lao"
 msgstr "ພາສາລາວ"
 
-#: .\dj_roungnakhone_hotel\settings\common.py:114
+#: .\dj_roungnakhone_hotel\settings\common.py:115
 msgid "Thai"
 msgstr "ພາສາໄທ"
 
-#: .\templates\roungnakhone_hotel\partials\header.html:45
-msgid "Home"
-msgstr "ໜ້າຫຼັກ"
+#: .\templates\roungnakhone_hotel\index.html:134
+#: .\templates\roungnakhone_hotel\pages\accomodation.html:49
+#: .\templates\roungnakhone_hotel\pages\accomodation.html:157
+msgid "Book Now"
+msgstr "ຈອງເລີຍ"
 
-#: .\templates\roungnakhone_hotel\partials\header.html:48
+#: .\templates\roungnakhone_hotel\index.html:137
+#: .\templates\roungnakhone_hotel\pages\accomodation.html:52
+#: .\templates\roungnakhone_hotel\pages\accomodation.html:160
+msgid "night"
+msgstr "ຄືນ"
+
+#: .\templates\roungnakhone_hotel\index.html:228
+#: .\templates\roungnakhone_hotel\pages\about.html:15
+#: .\templates\roungnakhone_hotel\partials\header.html:49
 msgid "About us"
 msgstr "ກ່ຽວກັບພວກເຮົາ"
 
-#: .\templates\roungnakhone_hotel\partials\header.html:51
+#: .\templates\roungnakhone_hotel\index.html:228
+#: .\templates\roungnakhone_hotel\pages\about.html:32
+msgid "Our History"
+msgstr "ປະຫວັດຄວາມເປັນມາ"
+
+#: .\templates\roungnakhone_hotel\index.html:228
+#: .\templates\roungnakhone_hotel\pages\about.html:32
+msgid "Mission & Vision"
+msgstr "ພາລະກິດ & ວິໄສທັດ"
+
+#: .\templates\roungnakhone_hotel\index.html:231
+#: .\templates\roungnakhone_hotel\pages\about.html:35
+msgid ""
+"Vang Vieng District, Vientiane Province is a city and a province located in "
+"the central part of the Lao People's Democratic Republic. Vang Vieng "
+"District is a city full of beautiful nature, high mountains with rivers "
+"flowing from north to south, and important tourist attractions, the most "
+"outstanding of which are: Thum Cham Cave, Man Pha Cave, Thum Lom, Thum Pu "
+"Kham, Luang Luang."
+msgstr "ເມືອງວັງວຽງ, ແຂວງວຽງຈັນ ເປັນເມືອງ ແລະ ແຂວງໜຶ່ງທີ່ຕັ້ງຢູ່ພາກກາງຂອງ ສ.ປ.ປ.ລາວ ເຊິ່ງເມືອງວັງວຽງເປັນເມືອງທີ່ເຕັມໄປດ້ວຍທຳມະຊາດທີ່ສວຍສົດງົດງາມ ພູເຂົາສູງສະຫງ່າພ້ອມສາຍແມ່ນ້ຳຊ່ອງໄຫຼຜ່ານແຕ່ເໜືອຮອດໃຕ້ ແລະ ມີແຫຼ່ງທ່ອງທ່ຽວທີ່ສຳຄັນ ທີ່ພົ້ນເດັ່ນຫຼາຍທີ່ສຸດໃນນີ້ກໍ່ມີ: ຖໍ້າຈັງ, ຖ້ຳນາງຟ້າ, ຖ້ຳລົມ,ຖ້ຳປູຄຳ, ອ່າງຫຼວງ."
+
+#: .\templates\roungnakhone_hotel\index.html:233
+#: .\templates\roungnakhone_hotel\pages\about.html:37
+msgid ""
+"In addition to the main tourist attractions in Vang Vieng, there are many "
+"comfortable accommodation facilities to serve both domestic and foreign "
+"tourists who visit Vang Vieng, one of which is the Hung Nakhon Hotel. "
+"Another place is ready to serve tourists."
+msgstr " ນອກຈາກແຫຼ່ງທ່ອງທ່ຽວທີ່ສໍາຄັນແລ້ວໃນຕົວເມືອງວັງວຽງຍັງມີສະຖານທີ່ພັກເຊົາທີ່ສະດວກສະບາຍຫຼາກຫຼາຍແຫ່ງໄວ້ໃຫ້ບໍລິການນັກທ່ອງທ່ຽວທັງພາຍໃນ ແລະ ຕ່າງປະເທດທີ່ເຂົ້າມາທ່ຽວຊົມເມືອງວັງວຽງ ເຊິ່ງໜຶ່ງໃນສະຖານທີ່ພັກເຊົານັ້ນໂຮງແຮມຮຸ້ງນະຄອນ ກໍ່ເປັນອີກສະຖານທີ່ໜຶ່ງທີ່ພ້ອມຈະໃຫ້ບໍລິການນັກທ່ອງທ່ຽວ. "
+
+#: .\templates\roungnakhone_hotel\index.html:235
+#: .\templates\roungnakhone_hotel\pages\about.html:39
+msgid ""
+"Rainbow City is a place to stay in the center of Vang Vieng which is popular "
+"for guests to stay close to interesting tourist attractions. Rainbow City is "
+"a 3 star hotel with a total of 160 rooms. The rooms are well decorated. In "
+"addition, the hotel also has breakfast service and the place near the hotel "
+"also has shopping malls, restaurants, convenience stores that can facilitate "
+"tourists well."
+msgstr "ຮຸ້ງນະຄອນເປັນສະຖານທີ່ພັກເຊົາໜຶ່ງທີ່ຕັ້ງຢູ່ໃນໃຈກາງເມືອງວັງວຽງທີ່ໄດ້ຮັບຄວາມນິຍົມ ຜູ້ເຂົ້າພັກຈຶ່ງໄດ້ຢູ່ໃກ້ສະຖານທີ່ທ່ອງທ່ຽວໜ້າສົນໃຈ ຮຸ້ງນະຄອນເປັນໂຮງແຮມທີ່ມີລະດັບການໃຫ້ບໍລິການ 3 ດາວ ມີຫ້ອງພັກທັງໝົດ 160 ຫ້ອງ ຫ້ອງພັກໄດ້ຖືກຕົບແຕ່ງເປັນຢ່າງດີ. ນອກຈາກນີ້ທາງໂຮງແຮມຍັງມີບໍລິການຮັບປະທານອາຫານເຊົ້າ ແລະ ສະຖານທີ່ ທີ່ຢູ່ໃກ້ຄຽງໂຮງແຮມຍັງມີການຈັບຈ່າຍສິນຄ້າ,ຮ້ານອາຫານ, ຮ້ານສະດວກຊື້ຕ່າງໆທີ່ສາມາດອໍານວຍຄວາມສະດວກໃຫ້ແກ່ນັກທ່ອງທ່ຽວໄດ້ເປັນຢ່າງດີ."
+
+#: .\templates\roungnakhone_hotel\pages\about.html:32
+msgid "About Us"
+msgstr "ກ່ຽວກັບພວກເຮົາ"
+
+#: .\templates\roungnakhone_hotel\pages\accomodation.html:22
+#: .\templates\roungnakhone_hotel\partials\header.html:52
 msgid "Accomodation"
 msgstr "ຫ້ອງພັກ"
 
-#: .\templates\roungnakhone_hotel\partials\header.html:54
-msgid "Gallery"
-msgstr "ຄັງຮູບ"
+#: .\templates\roungnakhone_hotel\pages\accomodation.html:36
+msgid "Top Accomodation"
+msgstr "ຫ້ອງພັກຍອດນິຍົມ"
 
-#: .\templates\roungnakhone_hotel\partials\header.html:79
+#: .\templates\roungnakhone_hotel\pages\accomodation.html:145
+msgid "Normal Accomodation"
+msgstr "ຫ້ອງພັກທຳມະດາ"
+
+#: .\templates\roungnakhone_hotel\pages\contact.html:15
+#: .\templates\roungnakhone_hotel\partials\header.html:80
 msgid "Contact"
 msgstr "ຕິດຕໍ່"
 
-#: .\templates\roungnakhone_hotel\partials\header.html:116
+#: .\templates\roungnakhone_hotel\pages\gallery.html:15
+#: .\templates\roungnakhone_hotel\partials\header.html:55
+msgid "Gallery"
+msgstr "ຄັງຮູບ"
+
+#: .\templates\roungnakhone_hotel\pages\gallery.html:29
+msgid "Hotel Gallery"
+msgstr "ຄັງຮູບໂຮງແຮມ"
+
+#: .\templates\roungnakhone_hotel\partials\header.html:46
+msgid "Home"
+msgstr "ໜ້າຫຼັກ"
+
+#: .\templates\roungnakhone_hotel\partials\header.html:117
 msgid "Profile"
 msgstr "ໂປຣໄຟລ໌"
 
-#: .\templates\roungnakhone_hotel\partials\header.html:118
+#: .\templates\roungnakhone_hotel\partials\header.html:119
 msgid "Logout"
 msgstr "ອອກຈາກລະບົບ"
-
-#: .\templates\roungnakhone_hotel\partials\header.html:123
-msgid "Login"
-msgstr "ເຂົ້າສູ່ລະບົບ"

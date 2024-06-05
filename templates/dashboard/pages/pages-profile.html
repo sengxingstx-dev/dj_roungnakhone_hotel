@@ -1,6 +1,13 @@
 {% extends 'dashboard/base.html' %}
 {% load static %}
 {% block content %}
+
+<style>
+  * {
+    font-family: "NotoSansLao";
+  }
+</style>
+
 <!-- ============================================================== -->
 <!-- Bread crumb and right sidebar toggle -->
 <!-- ============================================================== -->
@@ -76,7 +83,7 @@
           <form class="form-horizontal form-material mx-2" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="form-group">
-              <label class="col-md-12 mb-0">Username</label>
+              <label class="col-md-12 mb-0">ຊື່ຜູ້ໃຊ້</label>
               <div class="col-md-12">
                 <input
                   type="text"
@@ -89,7 +96,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label class="col-md-12 mb-0">First Name</label>
+              <label class="col-md-12 mb-0">ຊື່</label>
               <div class="col-md-12">
                 <input
                   type="text"
@@ -101,7 +108,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label class="col-md-12 mb-0">Last Name</label>
+              <label class="col-md-12 mb-0">ນາມສະກຸນ</label>
               <div class="col-md-12">
                 <input
                   type="text"
@@ -113,7 +120,7 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="email" class="col-md-12">Email</label>
+              <label for="email" class="col-md-12">ອີເມວ</label>
               <div class="col-md-12">
                 <input
                   type="email"
@@ -136,7 +143,7 @@
               </div>
             </div> -->
             <div class="form-group">
-              <label class="col-md-12 mb-0">Phone No</label>
+              <label class="col-md-12 mb-0">ເບີໂທ</label>
               <div class="col-md-12">
                 <input
                   type="text"
@@ -149,7 +156,7 @@
             </div>
             <div class="form-group">
               <div class="mb-3">
-                <label for="formFiles" class="form-label">Profile Image</label><br>
+                <label for="formFiles" class="form-label">ຮູບໂປຣໄຟຣ</label><br>
                 <input class="form-control" type="file" id="formFile" name="profile_image" accept=".png, .jpg, .jpeg">
               </div>
             </div>
@@ -182,7 +189,7 @@
                   class="btn btn-success mx-auto mx-md-0 text-white"
                   type="submit"
                 >
-                  Update Profile
+                  ບັນທືກ
                 </button>
               </div>
             </div>

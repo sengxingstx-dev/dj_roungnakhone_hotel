@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
-{% load humanize %}
+{% load i18n %}
+{% load custom_humanize %}
 <html lang="en">
   <!-- Required meta tags -->
   <head>
@@ -220,11 +221,11 @@
           />
         </p>
         <p>
-          <label for="start-date">Check in date</label>
+          <label for="start-date">{% trans "Check-in Date" %}</label>
           <input type="datetime-local" id="start-date" name="check_in_date" class="form-control" placeholder="Enter check in date" oninput="validateDates(); this.className = ''" />
         </p>
         <p>
-          <label for="end-date">Check out date</label>
+          <label for="end-date">{% trans "Check-out Date" %}</label>
           <input type="datetime-local" id="end-date" name="check_out_date" class="form-control" placeholder="Enter check out date" oninput="validateDates(); this.className = ''" />
         </p>
       </div>
@@ -237,7 +238,7 @@
               <div class="row">
                 <div class="col-12 p-5 ">
                   <img
-                    src="{% static 'roungnakhone_hotel/image/my-bcel-qr.jpg' %}"
+                    src="{% static 'roungnakhone_hotel/image/soutthida-bcel-qr.jpg' %}"
                     alt="BCEL QR"
                   />
                 </div>

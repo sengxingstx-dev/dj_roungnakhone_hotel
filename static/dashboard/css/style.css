@@ -62,6 +62,12 @@ File: scss
  *  12. Forms
  *  14. Component
  */
+
+@font-face {
+  font-family: 'NotoSansLao';
+  src: url('../../roungnakhone_hotel/fonts/NotoSansLao-Regular.ttf'),
+}
+
 body[data-theme="dark"] {
   /* Card Color */
   /* Settings for the  element */
@@ -424,7 +430,8 @@ body[data-theme="dark"] {
   box-sizing: border-box; }
 
 html {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: "NotoSansLao";
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -439,7 +446,8 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Nunito Sans", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif; */
+  font-family: "NotoSansLao", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.5;
@@ -544,7 +552,8 @@ pre,
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  /* font-family: monospace, monospace; */
+  font-family: "NotoSansLao", monospace;
   font-size: 1em; }
 
 pre {
@@ -804,7 +813,8 @@ code,
 kbd,
 pre,
 samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  /* font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; } */
+  font-family: "NotoSansLao", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 code {
   font-size: 87.5%;
@@ -5144,7 +5154,8 @@ button.close {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Nunito Sans", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif; */
+  font-family: "NotoSansLao", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5229,7 +5240,8 @@ button.close {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Nunito Sans", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif; */
+  font-family: "NotoSansLao", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7737,7 +7749,8 @@ button.bg-purple:focus {
     margin-left: auto !important; } }
 
 .text-monospace {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  /* font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; } */
+  font-family: "NotoSansLao", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 .text-justify {
   text-align: justify !important; }
@@ -9171,7 +9184,8 @@ Table-Jsgrid table
     font-size: 12px; }
     .page-breadcrumb .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
       content: "\e649";
-      font-family: themify;
+      /* font-family: themify; */
+      font-family: "NotoSansLao";
       color: #ced4da;
       font-size: 11px; }
 
@@ -14124,7 +14138,8 @@ Horizontal Timeline page
 
 .dd3-handle:before {
   content: "\f0c9";
-  font-family: FontAwesome;
+  /* font-family: FontAwesome; */
+  font-family: "NotoSansLao";
   display: block;
   position: absolute;
   left: 0;
@@ -14145,7 +14160,8 @@ Horizontal Timeline page
   border: 1px solid rgba(120, 130, 140, 0.13);
   padding: 8px 16px;
   height: auto;
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "NotoSansLao", sans-serif;
   font-weight: 400;
   border-radius: 0; }
 
