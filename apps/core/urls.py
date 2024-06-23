@@ -36,6 +36,11 @@ urlpatterns = [
     path('manage-rooms/delete/<int:pk>/', views.delete_room, name='delete-room'),
     path('manage-categories/delete/<int:pk>/', views.delete_category, name='delete-category'),
     path(
+        'manage-reservation/delete/<int:pk>/', views.delete_reservation, name='delete-reservation'
+    ),
+    path('manage-payment/delete/<int:pk>/', views.delete_payment, name='delete-payment'),
+    # -> Exports
+    path(
         'export-receptionists/csv/', views.export_receptionists_csv, name='export-receptionists-csv'
     ),
     path(

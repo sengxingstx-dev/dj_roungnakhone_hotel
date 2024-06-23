@@ -186,11 +186,11 @@
                   <tbody>
                     <tr>
                       <td>{{ payment.reservation.room }}</td>
-                      <td>1</td>
+                      <td>{{ nights }}</td>
                       <td>{{ payment.reservation.check_in_date|date:"d-m-Y" }}, {{ payment.reservation.check_in_date|time:"H:i" }}</td>
                       <td>{{ payment.reservation.check_out_date|date:"d-m-Y" }}, {{ payment.reservation.check_out_date|time:"H:i" }}</td>
-                      <td>{{ payment.reservation.total_price|intcomma }}</td>
-                      <td>{{ payment.reservation.total_price|intcomma }}</td>
+                      <td>{{ price|intcomma }}</td>
+                      <td>{{ payment.amount|intcomma }}</td>
                     </tr>
                   </tbody>
                 </table>

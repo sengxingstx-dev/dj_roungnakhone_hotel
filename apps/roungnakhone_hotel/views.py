@@ -348,6 +348,26 @@ def delete_category(request, pk):
     return render(request, 'dashboard/pages/manage-categories.html')
 
 
+def delete_reservation(request, pk):
+    reservation = Reservation.objects.get(pk=pk)
+
+    if request.method == 'POST':
+        reservation.delete()
+        return redirect('manage-reservations')
+
+    return render(request, 'dashboard/pages/manage-reservations.html')
+
+
+def delete_payment(request, pk):
+    payment = Payment.objects.get(pk=pk)
+
+    if request.method == 'POST':
+        payment.delete()
+        return redirect('manage-payments')
+
+    return render(request, 'dashboard/pages/manage-payments.html')
+
+
 #
 # NOTE: Exports
 #
@@ -664,7 +684,7 @@ def book_now(request):
                 print(f"Error: {e}")
                 return redirect('error-page')  # Redirect to an error page
 
-            return redirect('payment-receipt', pk=payment.id)  # Redirect to a success page
+            return redirect('payment-receipt', pk=reservation.id)  # Redirect to a success page
         else:
             # If either form is not valid, you may want to handle this case
             # For example, you can display an error message or redirect to an error page
@@ -682,11 +702,15 @@ def book_now(request):
 
 def payment_receipt(request, pk):
     try:
-        payment = Payment.objects.get(id=pk)
+        reservation = Reservation.objects.get(id=pk)
+        payment = Payment.objects.get(reservation=reservation)
+
+        nights = (reservation.check_out_date - reservation.check_in_date).days
+        price = reservation.room.price
     except Payment.DoesNotExist:
         raise Http404('Payment does not exist.')
 
-    context = {'payment': payment}
+    context = {'payment': payment, 'nights': nights, 'price': price}
     return render(request, 'roungnakhone_hotel/pages/payment-receipt.html', context)
 
 

@@ -161,7 +161,7 @@
       <!-- Input field for the total value -->
       <input type="hidden" name="guest" value="{{ guest.id }}">
       <input type="hidden" name="room" value="{{ room.id }}">
-      <input type="hidden" name="amount" value="{{ room.price }}">
+      <input type="hidden" name="amount" id="room-price" value="{{ room.price }}">
 
       <h1 class="text-uppercase">Reservation Form</h1>
       <!-- One "tab" for each step in the form: -->
@@ -253,11 +253,11 @@
                     </p>
                   </div>
                   <div class="d-flex justify-content-between mb-2">
-                    <p class="textmuted">Qty</p>
-                    <p class="fs-14 fw-bold">1</p>
+                    <p class="textmuted">Quantity</p>
+                    <p class="fs-14 fw-bold" id="qty">1</p>
                   </div>
                   <div class="d-flex justify-content-between mb-2">
-                    <p class="textmuted">Subtotal</p>
+                    <p class="textmuted">Price</p>
                     <p class="fs-14 fw-bold">
                       <span class="fas fa-kip-sign pe-1"></span>{{ room.price|intcomma }} Kip
                     </p>
@@ -276,7 +276,7 @@
                     <p class="textmuted fw-bold">Total</p>
                     <div class="d-flex align-text-top">
                       <span class="fas fa-kip-sign mt-1 pe-1 fs-14"></span
-                      ><span class="h4">{{ room.price|intcomma }} Kip</span>
+                      ><span class="h4" id="price-display">{{ room.price|intcomma }} Kip</span>
                     </div>
                   </div>
                 </div>
@@ -368,6 +368,11 @@
         }
         // Otherwise, display the correct tab:
         showTab(currentTab);
+
+        // Calculate the total cost when moving to the next step
+        if (n === 1) {
+          calculateTotalCost();
+        }
       }
 
       function validateForm() {
@@ -405,6 +410,37 @@
         }
         //... and adds the "active" class on the current step:
         x[n].className += " active";
+      }
+
+      function intComma(num) {
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      }
+
+      function calculateTotalCost() {
+        // Get the room price
+        var roomPrice = parseFloat(document.getElementById("room-price").value);
+
+        // Get the start and end dates
+        var startDate = new Date(document.getElementById("start-date").value);
+        var endDate = new Date(document.getElementById("end-date").value);
+        
+        // Calculate the number of days
+        var timeDiff = endDate - startDate;
+        var daysDiff = Math.ceil(timeDiff / (1000 * 3600 * 24));
+        
+        // Calculate the total cost
+        var totalCost = roomPrice * daysDiff;
+
+        // Format the total cost with commas and two decimal places
+        var formattedTotalCost = intComma(totalCost.toFixed(2));
+
+        // Update the display
+        document.getElementById("price-display").innerHTML = `${formattedTotalCost} Kip`;
+        document.getElementById("qty").innerHTML = `${daysDiff} ${daysDiff > 1 ? 'days' : 'day'}`;
+        document.getElementById("room-price").value = totalCost;
+
+        console.log('Room Price: ', roomPrice)
+        console.log('Updated Room Price: ', document.getElementById("room-price").value)
       }
 
       function validateDates() {
